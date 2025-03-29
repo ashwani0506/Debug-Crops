@@ -21,8 +21,7 @@ export const diseases = [
       "Plant resistant varieties"
     ],
     images: [
-      "https://extension.umn.edu/sites/extension.umn.edu/files/late-blight-tomato-leaf.jpg",
-      "https://extension.umn.edu/sites/extension.umn.edu/files/late-blight-potato.jpg"
+      "https://media.istockphoto.com/id/636687672/photo/tomato-plants-in-greenhouse.jpg?s=612x612&w=0&k=20&c=4pOjhWkkDp8m_Up4ydRweQlvmvJ0Drwut0EERffEPf0="
     ]
   },
   {
@@ -44,8 +43,7 @@ export const diseases = [
       "Water at base of plant"
     ],
     images: [
-      "https://www.missouribotanicalgarden.org/images/E0040/blackspot_rose1.jpg",
-      "https://www.missouribotanicalgarden.org/images/E0040/blackspot_rose2.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/2/23/Black_spot.jpg"
     ]
   },
   // Bacterial Diseases
@@ -68,8 +66,7 @@ export const diseases = [
       "Practice crop rotation"
     ],
     images: [
-      "https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-leaf-spot-pepper.jpg",
-      "https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-spot-tomato.jpg"
+      "https://agritech.tnau.ac.in/crop_protection/chilli-disease-bact.jpg"
     ]
   },
   {
@@ -91,8 +88,7 @@ export const diseases = [
       "Use resistant rootstocks"
     ],
     images: [
-      "https://www.missouribotanicalgarden.org/images/E0040/crown_gall1.jpg",
-      "https://www.missouribotanicalgarden.org/images/E0040/crown_gall2.jpg"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPwhsNgWYQ4pmwAixzTcAvaqPoawjLrEafSg&s"
     ]
   },
   // Viral Diseases
@@ -115,8 +111,7 @@ export const diseases = [
       "Practice good sanitation"
     ],
     images: [
-      "https://extension.umn.edu/sites/extension.umn.edu/files/mosaic-virus-tomato.jpg",
-      "https://extension.umn.edu/sites/extension.umn.edu/files/mosaic-virus-pepper.jpg"
+      "https://www.epicgardening.com/wp-content/uploads/2022/03/A-leave-appearing-patterned-because-of-mosaic-virus.jpg"
     ]
   },
   {
@@ -138,8 +133,7 @@ export const diseases = [
       "Plant resistant varieties"
     ],
     images: [
-      "https://extension.umn.edu/sites/extension.umn.edu/files/cucumber-mosaic-virus1.jpg",
-      "https://extension.umn.edu/sites/extension.umn.edu/files/cucumber-mosaic-virus2.jpg"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5C-M2yp1PjVTlA7HbRHuW85IBhH8wGTN54Q&s"
     ]
   }
   // Additional Fungal Diseases
@@ -162,7 +156,7 @@ export const diseases = [
       "Practice crop rotation"
     ],
     images: [
-      "https://www.extension.purdue.edu/extmedia/BP/BP-179-W.jpg"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc5KWV5LRWlIu4syYQ7xio850chWBzZQT3Ig&s"
     ]
   },
   {
@@ -184,7 +178,7 @@ export const diseases = [
       "Solarize soil"
     ],
     images: [
-      "https://extension.umn.edu/sites/extension.umn.edu/files/fusarium-wilt-tomato.jpg"
+      "https://www.koppert.in/content/_processed_/8/7/csm_basal_rot_fusarium_oxysporum_tomato_koppert_2db0bb1945.jpg"
     ]
   },
     {
@@ -206,7 +200,7 @@ export const diseases = [
         "Sanitize tools and equipment"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-canker-tomato.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMC6hxZ0XYyIVvPZ8C2LQ9xbTVaHaVYXedvw&s"
       ]
     },
     {
@@ -228,7 +222,7 @@ export const diseases = [
         "Balanced fertilization"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-blight-rice.jpg"
+        "https://assets.gardeners.com/transform/667b8cbe-9aaf-4c5f-81c7-b7809753c8cd/5350-bacterial-blight"
       ]
     }
     // Additional Viral Diseases
@@ -251,7 +245,7 @@ export const diseases = [
         "Maintain weed control"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/tomato-spotted-wilt.jpg"
+        "https://ausveg.com.au/app/uploads/2019/05/TPWV-web.jpg"
       ]
     },
     {
@@ -273,7 +267,7 @@ export const diseases = [
         "Remove infected plants"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/bean-common-mosaic.jpg"
+        "https://www.saillog.co/Alert%20system/pictures%20for%20the%20system/BGMV/image3.jpg"
       ]
     },
     {
@@ -295,7 +289,7 @@ export const diseases = [
         "Plant in raised beds"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/pythium-root-rot.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiONKKFm9ZQ10gJNB_SN_KjsnKZhXSbx8lZw&s"
       ]
     },
     {
@@ -317,7 +311,7 @@ export const diseases = [
         "Remove infected plants"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/downy-mildew-cucumber.jpg"
+        "https://www.planetnatural.com/wp-content/uploads/2012/12/downy-mildew-disease.jpg"
       ]
     },
     {
@@ -339,7 +333,7 @@ export const diseases = [
         "Plant resistant varieties"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-wilt-cucumber.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaCLMxeE0dltpbOlSnTId0W8xA1gOjxglpDw&s"
       ]
     },
     {
@@ -361,7 +355,7 @@ export const diseases = [
         "Regular monitoring"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/citrus-greening.jpg"
+        "https://upload.wikimedia.org/wikipedia/commons/1/1e/Huanglongbing.jpg"
       ]
     },
     {
@@ -383,7 +377,7 @@ export const diseases = [
         "Practice crop rotation"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/potato-virus-y.jpg"
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Necrotic_ringspot.JPG/220px-Necrotic_ringspot.JPG"
       ]
     },
     {
@@ -405,7 +399,7 @@ export const diseases = [
         "Practice good sanitation"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/squash-mosaic-virus.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV7n6enpMALijQZpsl0xhUATstTql9h5NEOg&s"
       ]
     },
     {
@@ -427,7 +421,7 @@ export const diseases = [
         "Plant resistant varieties"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/apple-scab.jpg"
+        "https://www.apsnet.org/edcenter/pdlessons/PublishingImages/AppleScab01sm.jpg"
       ]
     },
     {
@@ -471,7 +465,7 @@ export const diseases = [
         "Remove infected plants"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-ring-rot.jpg"
+        "https://millerresearch.com/wp-content/uploads/2019/01/DSC_0023-1024x688.jpg"
       ]
     },
     {
@@ -493,7 +487,7 @@ export const diseases = [
         "Monitor regularly"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/grapevine-leafroll.jpg"
+        "https://www.agric.wa.gov.au/sites/gateway/files/cabernet%20grafted%20from%20merlot%20%282%29.JPG"
       ]
     },
     {
@@ -515,7 +509,7 @@ export const diseases = [
         "Use resistant varieties"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/verticillium-wilt.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNWYeC1JEbwywWv6DqT6RPeNmKKWaCgj8IAA&s"
       ]
     },
     {
@@ -537,7 +531,7 @@ export const diseases = [
         "Protect from rain during bud break"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/peach-leaf-curl.jpg"
+        "https://www.growingproduce.com/wp-content/uploads/2018/03/Peach-Leaf-Curl-symptoms.jpg"
       ]
     },
     {
@@ -559,7 +553,7 @@ export const diseases = [
         "Balance nitrogen fertilization"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/rice-blast.jpg"
+        "https://www.dpi.nsw.gov.au/__data/assets/image/0009/798750/RiceBlast1.jpg"
       ]
     },
     {
@@ -581,7 +575,7 @@ export const diseases = [
         "Apply fungicides when needed"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/wheat-stem-rust.jpg"
+        "https://gdb.voanews.com/c204a1e5-c96e-4843-ac75-e66374be7cd8_w1200_r1.jpg"
       ]
     },
     {
@@ -603,7 +597,7 @@ export const diseases = [
         "Use resistant hybrids"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/corn-smut.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-UXtTpgkjd1rHyjgxMARvepSH8EGQ80HtxQ&s"
       ]
     },
     {
@@ -625,7 +619,7 @@ export const diseases = [
         "Apply copper-based sprays"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-brown-spot.jpg"
+        "https://www.canr.msu.edu/uploads/images/7-9-Septoria-Chilvers2-MARTIN.jpg"
       ]
     },
     {
@@ -647,7 +641,7 @@ export const diseases = [
         "Use resistant varieties"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/soybean-mosaic.jpg"
+        "https://media.assettype.com/agrowon%2F2022-08%2F9ebbc25c-2f1c-464b-a5d1-20f936f12275%2FUntitled_design___2022_08_06T141009_348.png"
       ]
     },
     {
@@ -669,7 +663,7 @@ export const diseases = [
         "Apply insecticides when needed"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/barley-yellow-dwarf.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTztL8_vrkKSxGdvUfFRgUV3M4NzS-WljfAvw&s"
       ]
     }
     ,{
@@ -691,7 +685,7 @@ export const diseases = [
         "Long-term crop rotation"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/panama-disease.jpg"
+        "https://cdn.britannica.com/30/40730-050-4B4C6560/Banana-trees-disease-Panama.jpg"
       ]
     },
     {
@@ -713,7 +707,7 @@ export const diseases = [
         "Proper plant spacing"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/coffee-rust.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi61bIugGgGL8F8iFCyygIABlPGO9w2EoPKQ&s"
       ]
     },
     {
@@ -735,7 +729,7 @@ export const diseases = [
         "Plant resistant varieties"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/cassava-mosaic.jpg"
+        "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.2747/asset/23041bdb-1601-4bac-85c1-3c78330ea20a/assets/graphic/cassava%20mosaic%20virus%201.jpg"
       ]
     },
     {
@@ -757,7 +751,7 @@ export const diseases = [
         "Remove infected panicles"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/mango-malformation.jpg"
+        "https://cdn.shopify.com/s/files/1/0762/3639/0696/files/mango_malformation2_480x480.webp?v=1706531499"
       ]
     },
     {
@@ -779,7 +773,7 @@ export const diseases = [
         "Copper-based sprays"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-blight-rice-tropical.jpg"
+        "https://www.researchgate.net/profile/Mohammad-Malek-Faizal-Azizi/publication/359220404/figure/fig1/AS:1141720959975425@1649218897482/Symptoms-of-bacterial-leaf-blight-disease-in-rice-caused-by-Xanthomonas-oryzae-pv.png"
       ]
     },
     {
@@ -801,7 +795,7 @@ export const diseases = [
         "Plant resistant varieties"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/papaya-ringspot.jpg"
+        "https://www.greenlife.co.ke/wp-content/uploads/2022/04/papaya_ringspot.jpg"
       ]
     },
     {
@@ -823,7 +817,7 @@ export const diseases = [
         "Apply insecticidal soaps"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/okra-yellow-vein-mosaic.jpg"
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bhendi_vein_clearingPhoto-0028.jpg/330px-Bhendi_vein_clearingPhoto-0028.jpg"
       ]
     },
     {
@@ -845,7 +839,7 @@ export const diseases = [
         "Practice crop rotation"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/yam-anthracnose.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMXDX-VkcI4iuZGoDdxWyGrxeJUcO6a8OQRg&s"
       ]
     },
     {
@@ -867,7 +861,7 @@ export const diseases = [
         "Use resistant cultivars"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/taro-leaf-blight.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc77t1boguZVjfXeNqpyI0La3o2aDdmVY8-w&s"
       ]
     },
     {
@@ -889,7 +883,7 @@ export const diseases = [
         "Maintain field sanitation"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/sweet-potato-scurf.jpg"
+        "https://apps.lucidcentral.org/pppw_v10/images/entities/sweetpotato_scurf_260/image001.jpg"
       ]
     },
     {
@@ -911,7 +905,7 @@ export const diseases = [
         "Remove infected plants"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/eggplant-bacterial-wilt.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEiSrurAl4W1SfCwHR6WqkNPYmCcJYArdrgw&s"
       ]
     },
     {
@@ -933,7 +927,7 @@ export const diseases = [
         "Plant resistant varieties"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/yard-long-bean-mosaic.jpg"
+        "https://www.shutterstock.com/image-photo/plant-disease-yard-long-bean-260nw-731261050.jpg"
       ]
     },
     {
@@ -955,7 +949,7 @@ export const diseases = [
         "Quarantine measures"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/citrus-canker.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScJomdBeupCmyaAc3NhG_rGICh_RP0X-Qbjg&s"
       ]
     },
     {
@@ -977,7 +971,7 @@ export const diseases = [
         "Improve drainage"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/guava-wilt.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgLj0zC8CE7wiNYAo8p1WAUijF_m4nGapcnA&s"
       ]
     },
     {
@@ -999,7 +993,7 @@ export const diseases = [
         "Resistant rootstocks"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/avocado-root-rot.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiGH8doNW9s8J8264OiEJnn4fWKD7vA5FNAg&s"
       ]
     },
     {
@@ -1021,7 +1015,7 @@ export const diseases = [
         "Use resistant varieties"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/passion-fruit-woodiness.jpg"
+        "https://blogs.ifas.ufl.edu/stlucieco/files/2021/07/screen-1.jpg"
       ]
     },
     {
@@ -1043,7 +1037,7 @@ export const diseases = [
         "Canopy management"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/durian-phytophthora.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVG1XHQQaHD7oiT2jCBpePcA-OrSaXfo5wRQ&s"
       ]
     },
     {
@@ -1065,7 +1059,7 @@ export const diseases = [
         "Regular monitoring"
       ],
       images: [
-        "https://extension.umn.edu/sites/extension.umn.edu/files/rambutan-yellow-leaf.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXDKmFYLeGKCChyNctASZIv_tIP8pS7KXT-w&s"
       ]
     }
 ];

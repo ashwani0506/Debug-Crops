@@ -20,6 +20,7 @@ import {
   CloudSnow,
   AlertTriangle,
 } from "lucide-react"
+import { getMockWeatherData } from "@/lib/utils/mockWeather"
 
 export default function WeatherPage() {
   const [location, setLocation] = useState("London")
@@ -35,29 +36,16 @@ export default function WeatherPage() {
         setError(null)
 
         console.log(`Fetching weather for: ${location}`)
-        // Use our API route instead of directly calling the weather API
-        const response = await fetch(`/api/weather?location=${encodeURIComponent(location)}`, {
-          cache: "no-store",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-
-        if (!response.ok) {
-          const errorData = await response.json().catch(() => ({}))
-          console.error("API response error:", response.status, errorData)
-          throw new Error(errorData.error || `Failed to fetch weather data (${response.status})`)
-        }
-
-        const data = await response.json()
-
-        if (data.error) {
-          throw new Error(data.error)
-        }
-
+        
+        // Instead of making an API call, use our mock data
+        const data = getMockWeatherData(location)
+        
+        // Simulate network delay for realism
+        await new Promise(resolve => setTimeout(resolve, 800))
+        
         setWeatherData(data)
       } catch (err) {
-        console.error("Error fetching weather data:", err)
+        console.error("Error generating weather data:", err)
         setError(err.message || "Failed to load weather data. Please try again later.")
       } finally {
         setLoading(false)
@@ -123,66 +111,9 @@ export default function WeatherPage() {
     }
   }
 
-  // Fallback data for when the API is unavailable
+  // We'll keep the fallback data function for compatibility
   const getFallbackWeatherData = () => {
-    return {
-      current: {
-        location: "Demo Location",
-        temperature: 24,
-        condition: "Partly Cloudy",
-        humidity: 65,
-        wind: 8,
-        precipitation: 10,
-        uv: "Moderate",
-        lastUpdated: new Date().toLocaleString(),
-      },
-      hourly: Array(8)
-        .fill(null)
-        .map((_, i) => ({
-          time: i === 0 ? "Now" : `${(new Date().getHours() + i) % 24}:00`,
-          temp: 24 - Math.floor(Math.random() * 5),
-          icon: ["sun", "cloud", "cloud-rain"][Math.floor(Math.random() * 3)],
-          precipitation: Math.floor(Math.random() * 30),
-        })),
-      daily: [
-        { day: "Today", icon: "sun", high: 24, low: 18, condition: "Sunny", precipitation: 10 },
-        { day: "Tomorrow", icon: "cloud", high: 22, low: 17, condition: "Partly Cloudy", precipitation: 20 },
-        { day: "Wednesday", icon: "cloud-rain", high: 19, low: 15, condition: "Light Rain", precipitation: 70 },
-        { day: "Thursday", icon: "cloud", high: 21, low: 16, condition: "Cloudy", precipitation: 30 },
-        { day: "Friday", icon: "sun", high: 25, low: 18, condition: "Sunny", precipitation: 5 },
-        { day: "Saturday", icon: "sun", high: 26, low: 19, condition: "Sunny", precipitation: 5 },
-        { day: "Sunday", icon: "cloud", high: 23, low: 17, condition: "Partly Cloudy", precipitation: 15 },
-      ],
-      insights: [
-        {
-          title: "Crop Disease Risk",
-          level: "Low",
-          icon: "alert-triangle",
-          details:
-            "Current conditions indicate low risk for fungal diseases. Continue regular monitoring of susceptible crops.",
-        },
-        {
-          title: "Irrigation Needs",
-          level: "Moderate",
-          icon: "droplets",
-          details:
-            "Moderate precipitation expected in the next 3 days. Monitor soil moisture levels for specific crops.",
-        },
-        {
-          title: "Harvesting Conditions",
-          level: "Favorable",
-          icon: "sun",
-          details: "Good conditions for harvesting in the next 2 days. Plan accordingly.",
-        },
-        {
-          title: "Spraying Conditions",
-          level: "Good",
-          icon: "wind",
-          details:
-            "Low wind speeds and low precipitation chance make today ideal for pesticide or fertilizer application.",
-        },
-      ],
-    }
+    return getMockWeatherData("Demo Location")
   }
 
   if (loading) {

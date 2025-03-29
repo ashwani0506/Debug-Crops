@@ -26,8 +26,78 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
+
+// Add type declaration for the translate element
+declare global {
+  interface Window {
+    googleTranslateElementInit: () => void
+  }
+}
+
 export default function HomePage() {
   const [email, setEmail] = useState("")
+
+  // Add Google Translate initialization
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+    script.async = true
+    document.head.appendChild(script)
+
+    const style = document.createElement('style')
+    style.textContent = `
+      .goog-te-gadget { font-family: inherit !important; }
+      .goog-te-gadget-simple {
+        background-color: rgba(255, 255, 255, 0.8) !important;
+        border: none !important;
+        padding: 8px 12px !important;
+        border-radius: 9999px !important;
+        font-size: 14px !important;
+        line-height: 1 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        backdrop-filter: blur(8px) !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+      }
+      .goog-te-gadget-simple:hover { background-color: white !important; }
+      .goog-te-menu-value {
+        color: #22c55e !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+      }
+      .goog-te-menu-value span { border: none !important; }
+      .goog-te-menu-value img { display: none !important; }
+      .goog-te-gadget-icon { display: none !important; }
+      .goog-te-banner-frame { display: none !important; }
+      .goog-te-combo { display: none !important; }
+      #google_translate_element select { display: none !important; }
+      .goog-te-menu-frame { box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important; }
+      .VIpgJd-ZVi9od-l4eHX-hSRGPd { display: none !important; }
+      .goog-te-menu-value span:not(:first-child) { display: none !important; }
+      .goog-te-menu-value span:first-child { color: #22c55e !important; }
+    `
+    document.head.appendChild(style)
+
+    window.googleTranslateElementInit = () => {
+      new (window as any).google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'hi,mr',
+        layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false,
+      }, 'google_translate_element')
+    }
+
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script)
+      }
+      if (style.parentNode) {
+        style.parentNode.removeChild(style)
+      }
+      delete (window as any).googleTranslateElementInit
+    }
+  }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -77,13 +147,18 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-green-light">
+      {/* Add Google Translate Element */}
+      <div 
+        id="google_translate_element" 
+        className="fixed top-6 right-36 z-50"
+      ></div>
       {/* Hero Landing Section */}
       <section className="relative min-h-screen flex flex-col justify-end items-center pt-24 overflow-hidden">
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-[#c7fff3] via-[#c7fff3] to-white z-10"></div>
           <Image
-            src="/placeholder.svg?height=1200&width=1920"
+            src="/images/farm-field.jpg" 
             alt="Healthy crops background"
             fill
             className="object-cover opacity-20"
@@ -175,7 +250,7 @@ export default function HomePage() {
             {[
               { value: "45+", label: "Crop Types", icon: <Leaf className="h-8 w-8 text-green" /> },
               { value: "200+", label: "Plant Diseases", icon: <Shield className="h-8 w-8 text-warning" /> },
-              { value: "95%", label: "Accuracy Rate", icon: <BarChart className="h-8 w-8 text-blue" /> },
+              { value: "82%", label: "Accuracy Rate", icon: <BarChart className="h-8 w-8 text-blue" /> },
               { value: "24/7", label: "AI Assistance", icon: <AlertCircle className="h-8 w-8 text-green" /> },
             ].map((stat, index) => (
               <motion.div
@@ -279,7 +354,7 @@ export default function HomePage() {
                     <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
                       <div className="absolute inset-0 bg-gradient-to-br from-green/20 to-transparent z-10"></div>
                       <Image
-                        src="/placeholder.svg?height=800&width=600"
+                        src="/placeholder.jpg" // Changed from placeholder
                         alt="AI Disease Detection"
                         fill
                         className="object-cover"
@@ -366,10 +441,10 @@ export default function HomePage() {
                   >
                     <div className="grid grid-cols-2 gap-4">
                       {[
-                        { name: "Late Blight", image: "/placeholder.svg?height=300&width=300" },
-                        { name: "Powdery Mildew", image: "/placeholder.svg?height=300&width=300" },
-                        { name: "Leaf Spot", image: "/placeholder.svg?height=300&width=300" },
-                        { name: "Rust", image: "/placeholder.svg?height=300&width=300" },
+                        { name: "Late Blight", image: "/images/diseases/late-blight.jpg" }, // Changed from placeholder
+                        { name: "Powdery Mildew", image: "/images/diseases/powdery-mildew.jpg" }, // Changed from placeholder
+                        { name: "Leaf Spot", image: "/images/diseases/leaf-spot.jpg" }, // Changed from placeholder
+                        { name: "Rust", image: "/images/diseases/rust.jpg" }, // Changed from placeholder
                       ].map((disease, index) => (
                         <motion.div
                           key={index}
@@ -551,22 +626,22 @@ export default function HomePage() {
                   {
                     name: "Late Blight",
                     crop: "Potato & Tomato",
-                    image: "/placeholder.svg?height=200&width=200",
+                    image: "/images/diseases/late-blight-card.jpg", // Changed from placeholder
                   },
                   {
                     name: "Powdery Mildew",
                     crop: "Various Crops",
-                    image: "/placeholder.svg?height=200&width=200",
+                    image: "/images/diseases/powdery-mildew-card.jpg", // Changed from placeholder
                   },
                   {
                     name: "Rust",
                     crop: "Wheat & Cereals",
-                    image: "/placeholder.svg?height=200&width=200",
+                    image: "/images/diseases/rust-card.webp", // Changed from placeholder
                   },
                   {
                     name: "Leaf Spot",
                     crop: "Various Crops",
-                    image: "/placeholder.svg?height=200&width=200",
+                    image: "/images/diseases/leaf-spot-card.webp", // Changed from placeholder
                   },
                 ].map((disease, index) => (
                   <Link
@@ -714,4 +789,6 @@ export default function HomePage() {
     </div>
   )
 }
+
+
 

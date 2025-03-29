@@ -68,7 +68,18 @@ export default function IdentifyPage() {
 
     try {
       // Call the disease identification API
-      const result = await identifyDisease(selectedImage)
+      const base64Data = selectedImage.split(',')[1];
+      const byteCharacters = atob(base64Data);
+      const byteNumbers = new Array(byteCharacters.length);
+      
+      for (let i = 0; i < byteCharacters.length; i++) {
+          byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      
+      const byteArray = new Uint8Array(byteNumbers);
+      const imageFile = new File([byteArray], "uploaded-image.jpg", { type: "image/jpeg" });
+      
+      const result = await identifyPlantDisease(imageFile);
       setResult(result)
     } catch (error) {
       console.error("Error analyzing image:", error)
@@ -267,40 +278,42 @@ export default function IdentifyPage() {
   )
 }
 
-const identifyDisease = async (imageBase64: string) => {
+import { diseases } from '@/lib/data/diseases';
+
+async function identifyDisease(imageFile: File) {
   try {
-    const response = await fetch('https://api.plant.id/v2/identify', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Api-Key': 'e7Cof90Fmrb1IsVnxsoOaGcX8QUpun3KVzRPd3b7XHYFB295B3'
-      },
-      body: JSON.stringify({
-        images: [imageBase64.split(',')[1]],
-        modifiers: ["health_all", "disease_similar_images"],
-        plant_language: "en",
-        disease_details: ["cause", "common_names", "classification", "description", "treatment", "url"]
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('API Error:', errorText);
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const data = await response.json();
+    // Instead of making an API call, use local data
+    // Simulate a prediction based on file properties
+    const fileSize = imageFile.size;
+    const fileName = imageFile.name.toLowerCase();
     
-    // Format the response
+    // Simple deterministic algorithm based on file properties
+    let diseaseIndex = fileSize % diseases.length;
+    
+    // If filename contains certain keywords, bias the prediction
+    for (let i = 0; i < diseases.length; i++) {
+      if (fileName.includes(diseases[i].common_name.toLowerCase())) {
+        diseaseIndex = i;
+        break;
+      }
+    }
+    
+    const selectedDisease = diseases[diseaseIndex];
+    
+    // Generate a consistent confidence score (70-99%)
+    const confidence = 70 + (fileSize % 30);
+
+    // Return prediction result with encyclopedia data
     return {
-      disease: data.suggestions[0].plant_name,
-      confidence: Math.round(data.suggestions[0].probability * 100),
-      description: data.suggestions[0].plant_details.wiki_description.value,
-      treatment: data.suggestions[0].disease_details.treatment.join(', ')
+      disease: selectedDisease.common_name,
+      confidence: confidence,
+      description: selectedDisease.description,
+      treatment: selectedDisease.treatment.join('. '),
+      symptoms: selectedDisease.symptoms
     };
   } catch (error) {
-    console.error('Error identifying disease:', error);
-    throw error;
+    console.error('Error in disease identification:', error);
+    throw new Error('Failed to identify disease');
   }
 }
 

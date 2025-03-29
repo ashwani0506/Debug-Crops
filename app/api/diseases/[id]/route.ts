@@ -4,19 +4,9 @@ export async function GET(request: Request, { params }: { params: { id: string }
   try {
     const id = params.id
 
-    // In a real implementation, you would fetch this from a database
-    // Example with a database:
-    // const disease = await prisma.disease.findUnique({
-    //   where: { id }
-    // });
-
-    // if (!disease) {
-    //   return NextResponse.json({ error: 'Disease not found' }, { status: 404 });
-    // }
-
     // Mock data for demonstration
     const diseases = {
-      "late-blight": {
+      "late_blight": {  // Changed from "late-blight" to "late_blight"
         name: "Late Blight",
         scientificName: "Phytophthora infestans",
         affectedCrops: ["Potato", "Tomato"],
@@ -69,7 +59,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
           },
         ],
       },
-      "powdery-mildew": {
+      "powdery_mildew": {  // Changed from "powdery-mildew" to "powdery_mildew"
         name: "Powdery Mildew",
         scientificName: "Various species",
         affectedCrops: ["Cucumber", "Squash", "Pumpkin", "Melon", "Grape"],
@@ -121,7 +111,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
           },
         ],
       },
-      "bacterial-leaf-spot": {
+      "bacterial_leaf_spot": {  // Changed from "bacterial-leaf-spot" to "bacterial_leaf_spot"
         name: "Bacterial Leaf Spot",
         scientificName: "Xanthomonas spp.",
         affectedCrops: ["Pepper", "Tomato", "Lettuce"],
@@ -169,7 +159,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
           },
         ],
       },
-      "tomato-mosaic-virus": {
+      "tomato_mosaic_virus": {  // Changed from "tomato-mosaic-virus" to "tomato_mosaic_virus"
         name: "Tomato Mosaic Virus",
         scientificName: "Tomato mosaic virus (ToMV)",
         affectedCrops: ["Tomato", "Pepper", "Eggplant"],

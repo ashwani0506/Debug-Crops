@@ -2,7 +2,7 @@
 
 import type * as React from "react"
 import { motion } from "framer-motion"
-import { Home, BookOpen, Upload, Cloud, Info, Sprout } from "lucide-react"
+import { Home, BookOpen, Upload, Cloud, Info, Sprout, Calendar } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
 
@@ -24,8 +24,15 @@ const menuItems: MenuItem[] = [
   },
   {
     icon: <Info className="h-5 w-5" />,
-    label: "About",
-    href: "/about",
+    label: "Guide",
+    href: "/guide",
+    gradient: "radial-gradient(circle, rgba(46,125,50,0.15) 0%, rgba(46,125,50,0.06) 50%, rgba(46,125,50,0) 100%)",
+    iconColor: "text-green",
+  },
+  {
+    icon: <Calendar className="h-5 w-5" />,
+    label: "Season",
+    href: "/season",
     gradient: "radial-gradient(circle, rgba(46,125,50,0.15) 0%, rgba(46,125,50,0.06) 50%, rgba(46,125,50,0) 100%)",
     iconColor: "text-green",
   },

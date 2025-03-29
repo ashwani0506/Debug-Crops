@@ -14,7 +14,7 @@ export default function DiseasePage() {
     try {
       setLoading(true)
       const diseaseId = params.diseaseId as string
-      const data = await fetchDiseaseDetails(diseaseId)
+      const data = await fetchDiseaseDetails(parseInt(diseaseId))
       setData(data)
     } catch (err) {
       setError("Failed to fetch disease data")
