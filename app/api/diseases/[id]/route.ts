@@ -1,14 +1,35 @@
 import { NextResponse } from "next/server"
 
+// Define the disease types for better type safety
+type Disease = {
+  name: string;
+  scientificName: string;
+  affectedCrops: string[];
+  category: "fungal" | "bacterial" | "viral";
+  images: string[];
+  description: string;
+  symptoms: string[];
+  conditions: string;
+  management: string[];
+  chemicalControl: {
+    name: string;
+    type: string;
+    application: string;
+  }[];
+}
+
+type Diseases = {
+  [key: string]: Disease;
+}
+
 export async function GET(
   request: Request,
   { params }: { params: { id: string } } 
 ) {
   try {
     const id = params.id
-
    
-    const diseases = {
+    const diseases: Diseases = {
       "late_blight": {  
         name: "Late Blight",
         scientificName: "Phytophthora infestans",
