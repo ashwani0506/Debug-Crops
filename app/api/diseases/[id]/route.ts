@@ -1,12 +1,15 @@
 import { NextResponse } from "next/server"
 
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+export async function GET(
+  request: Request,
+  { params }: { params: { id: string } } 
+) {
   try {
     const id = params.id
 
-    // Mock data for demonstration
+   
     const diseases = {
-      "late_blight": {  // Changed from "late-blight" to "late_blight"
+      "late_blight": {  
         name: "Late Blight",
         scientificName: "Phytophthora infestans",
         affectedCrops: ["Potato", "Tomato"],
